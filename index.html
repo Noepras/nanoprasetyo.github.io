@@ -48,7 +48,7 @@
     <section class="jumbotron text-center">
       <img src="img/img.jpeg" alt="noe" width="180" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Nano Prasetyo</h1>
-      <p class="lead">Beginer Web Developer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -272,6 +272,19 @@
         once : false, //agar animasi berjalan saat user pertama kali membuka website 
       });
     </script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script> 
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead',{duration: 1, delay: 1.5, text: 'Beginer Web Developer'})
+      gsap.from('.jumbotron img', {duration: 1, rotateY: 360, opacity : 0});
+      gsap.from('.navbar', {duration: 2 , opacity: 0, y: '-100%', ease: 'bounce'});
+      gsap.from('.display-4', {duration: 1.5 , opacity: 0, x: -50, delay:0.5, ease: 'back'});
+    </script>
+
+
     <!-- script js -->
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxKF_540tMo_worNSR4UNSkI-UDxa9AL7Papm-wybvCrJc1s2r-dw_6dz8BeBt0lGnb/exec'
